@@ -12,25 +12,29 @@ function App() {
 	function onSearch(ciudad) {
 		axios
 			.get(
-				`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`
+				`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`
 			)
 			.then(function (response) {
 				const ciudad = {
 					name: response.data.name,
 					id: response.data.id,
-					min: response.data.main.temp_min,
-					max: response.data.main.temp_min,
+					min: Math.round(response.data.main.temp_min),
+					max: Math.round(response.data.main.temp_max),
 					img: response.data.weather[0].icon,
 				};
-				setCities((oldCities) => [...oldCities, ciudad]);
+				if (cities.find((city) => city.id === ciudad.id)) {
+					alert('La ciudad ya fue agregada');
+				} else {
+					setCities((oldCities) => [...oldCities, ciudad]);
+				}
 			})
 			.catch(function (error) {
 				alert('No existe la ciudad');
 			});
 	}
 
-	function onClose() {
-		return 'holi';
+	function onClose(id) {
+		setCities(cities.filter((city) => city.id !== id));
 	}
 
 	return (

@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from '../Card/Card.jsx';
+import style from './Cards.module.css';
 
 function Cards({ cities, onClose }) {
 	return (
 		<>
-			<div>
+			<div className={style.mainContainer}>
 				{cities.map((city) => (
 					<Card
 						name={city.name}
@@ -13,6 +14,7 @@ function Cards({ cities, onClose }) {
 						min={city.min}
 						max={city.max}
 						img={city.img}
+						onClose={onClose}
 					/>
 				))}
 			</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import { Link } from 'react-router-dom';
 import style from './Nav.module.css';
-// import Logo from './src/img/LogoAppClima.png';
+import logo from '../../img/LogoAppClima.png';
 
 function Nav({ onSearch }) {
 	return (
@@ -10,18 +10,15 @@ function Nav({ onSearch }) {
 			<nav>
 				<div className={style.mainContainer}>
 					<div className={style.containerLogo}>
-						<a href='#'>
-							<img
-								className={style.logo}
-								src='img/Inversure.png'
-								alt='img not found'
-							/>
-						</a>
-
-						<h4> ClimaApp </h4>
+						<Link to='/' className={style.linkLogo}>
+							<img className={style.logo} src={logo} alt='img not found' />
+							<h2> App Climatic</h2>
+						</Link>
 					</div>
-					<div>
-						<Link> About </Link>
+					<div className={style.containerSearchBar}>
+						<Link to='/about' className={style.linkAbout}>
+							About
+						</Link>
 						<SearchBar onSearch={onSearch} />
 					</div>
 				</div>

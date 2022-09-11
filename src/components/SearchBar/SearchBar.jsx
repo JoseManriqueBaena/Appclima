@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import style from './SearchBar.module.css';
 
 function SearchBar({ onSearch }) {
 	const [city, setCity] = useState('');
@@ -18,14 +19,17 @@ function SearchBar({ onSearch }) {
 			<div>
 				<form onSubmit={handlerSubmit}>
 					<input
+						className={style.input}
 						type='text'
 						name='ciudad'
 						id='ciudad'
 						value={city}
-						placeholder='Busca la ciudad'
+						placeholder='Busca una ciudad'
 						onChange={handlerChange}
 					/>
-					<button type='submit'> Agregar ciudad</button>
+					<button className={style.button} type='submit'>
+						Agregar ciudad
+					</button>
 				</form>
 			</div>
 		</>

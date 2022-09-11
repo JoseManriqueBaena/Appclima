@@ -1,13 +1,63 @@
+:root {
+	--text-color: rgb(247, 247, 247);
+	--primary-color: rgb(46, 124, 214);
+	--secondary-color: rgb(7, 50, 100);
+}
+
 .mainContainer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 30px;
-	border: 1px solid red;
+	/* Glasmorfismo*/
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
 
 .containerLogo {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+}
+
+.linkLogo {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.linkLogo img {
+	margin-right: 24px;
+}
+
+.linkLogo h2 {
+	color: var(--text-color);
+	text-shadow: 1px 1px 5px rgb(89, 89, 89);
+	font-size: 24px;
+}
+
+.logo {
+	width: 80px;
+	height: 80px;
+}
+
+.containerSearchBar {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.linkAbout {
+	text-decoration: none;
+	color: var(--text-color);
+	text-shadow: 1px 1px 5px rgb(89, 89, 89);
+	margin-right: 24px;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.linkAbout:hover {
+	color: rgb(199, 199, 199);
 }

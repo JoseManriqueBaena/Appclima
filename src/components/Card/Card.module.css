@@ -1,0 +1,60 @@
+:root {
+	--text-color: rgb(247, 247, 247);
+	--primary-color: rgb(46, 124, 214);
+	--secondary-color: rgb(7, 50, 100);
+}
+
+.mainContainer {
+	display: flex;
+	justify-content: center;
+	color: var(--text-color);
+	text-shadow: 1px 1px 5px rgb(89, 89, 89);
+}
+
+.cardContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 12px 24px;
+	margin: 24px;
+	min-width: 250px;
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-radius: 10px;
+}
+
+.cardContainer h3 {
+	font-size: 24px;
+}
+
+.containerButton {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.button {
+	font-family: Roboto;
+	font-size: 16px;
+	color: var(--text-color);
+	background-color: var(--primary-color);
+	border: none;
+	border-radius: 5px;
+	height: 30px;
+	width: 30px;
+}
+
+.button:hover {
+	background-color: var(--secondary-color);
+}
+
+.infoContainer {
+	display: flex;
+	justify-content: center;
+	column-gap: 12px;
+}
+
+.infoContainer p {
+	font-size: 18px;
+}
