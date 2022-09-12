@@ -34,6 +34,15 @@
 	justify-content: flex-end;
 }
 
+.linkName {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+.linkName:hover {
+	color: var(--secondary-color);
+}
+
 .button {
 	font-family: Roboto;
 	font-size: 16px;

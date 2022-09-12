@@ -1,0 +1,58 @@
+:root {
+	--text-color: rgb(247, 247, 247);
+	--primary-color: rgb(46, 124, 214);
+	--secondary-color: rgb(7, 50, 100);
+}
+
+.mainContainer {
+	display: flex;
+	justify-content: center;
+	padding: 24px;
+}
+
+.ciudadContainer {
+	display: flex;
+	flex-direction: column;
+	min-width: 300px;
+	padding: 24px;
+	/* -------------------------------------------------- */
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-radius: 10px;
+	/* -------------------------------------------------- */
+	color: var(--text-color);
+	text-shadow: 1px 1px 5px rgb(89, 89, 89);
+}
+
+.ciudadContainer h3 {
+	font-size: 24px;
+}
+
+.ciudadContainer p {
+	font-size: 18px;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: start;
+}
+
+.button {
+	color: var(--text-color);
+	background: none;
+	border: none;
+	font-size: 24px;
+}
+
+.button:hover {
+	color: var(--secondary-color);
+}
+
+.infoContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	column-gap: 24px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './Card.module.css';
+import { Link } from 'react-router-dom';
 
 function Card({ name, min, max, img, onClose, id }) {
 	const handlerClick = (event) => {
@@ -15,7 +16,9 @@ function Card({ name, min, max, img, onClose, id }) {
 							x
 						</button>
 					</div>
-					<h3> {name} </h3>
+					<Link to={`/ciudad/${id}`} className={style.linkName}>
+						<h3> {name} </h3>
+					</Link>
 					<div className={style.infoContainer}>
 						<div>
 							<p>Min</p>
